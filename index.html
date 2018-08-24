@@ -10,6 +10,9 @@
 
         <title>Danilo Gonçalves</title>
 
+        <!--Favicon-->
+        <link rel="shortcut icon" href="public/img/icon/DG.ico" type="image/x-icon">
+
         <!--Fonts-->
         <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
 
@@ -26,36 +29,33 @@
     <body data-spy="scroll" data-target="#menu">
         <!--Navbar-->
         <nav id="menu" class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand" href="#">
-                <h1>LOGO</h1>
+            <a id="pc" class="navbar-brand scroll hvr-wobble img-fluid" href="#home">
+                <img src="public/img/logo/logo.png" alt="Danilo Gonçalves">
             </a>
+            <span id="cell" class="navbar-brand">
+                <img width="200" src="public/img/logo/logo-cell.png" alt="">
+            </span>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul style="font-family: 'Russo One', sans-serif;" class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home">Home
+                        <a class="nav-link scroll" href="#home">Home
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#sobre">Sobre</a>
+                        <a class="nav-link scroll" href="#sobre">Sobre</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#servicos">Serviços</a>
+                        <a class="nav-link scroll" href="#servicos">Serviços</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#habilidades">Habilidades</a>
+                        <a class="nav-link scroll" href="#portifolio">Portfólio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#portifolio">Portfólio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#orcamento">Orçamento</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contato">Contato</a>
+                        <a class="nav-link scroll" href="#contato">Contato</a>
                     </li>
                 </ul>
             </div>
@@ -69,8 +69,8 @@
         </div>
 
         <!--JS files-->
-        <script>$('body').scrollspy({ target: '#menu' })</script>
         <script src="public/js/popper.js"></script>
         <script src="public/js/bootstrap.js"></script>
+        <script src="public/js/scroll.js"></script>
     </body>
 </html>

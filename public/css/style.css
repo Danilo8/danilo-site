@@ -3,8 +3,32 @@
 * Navbar
 *-------------------------------------------------------------------------
 */
+#cell {
+    display: none;
+}
+
 #menu {
     background-color: #242a35;
+}
+
+@keyframes bounce {
+	0%, 20%, 60%, 100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		-webkit-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+
+	80% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+}
+.hvr-wobble:hover {
+	animation: bounce 0.8s;
 }
 
 @media (min-width: 62rem) {
@@ -12,20 +36,30 @@
         margin-left: 8%;
     }
     .navbar-nav {
-        margin-left: 30%;
+        margin-left: 35%;
     }
     .navbar-nav .nav-item .nav-link {
         border-bottom: 3px solid transparent;
         color: #fff;
     }
     
-    .navbar-nav .nav-item:hover {
+    .navbar-nav .nav-item .nav-link:hover {
+        border-bottom: 3px solid rgba(255, 255, 255, 0.637);
+        color: rgba(255, 255, 255, 0.637);
+    }
+    .navbar-nav .nav-item .active,
+    .navbar-nav .nav-item .active:hover { 
         border-bottom: 3px solid #fff;
         color: #fff;
     }
-    .navbar-nav .nav-item .active { 
-        border-bottom: 3px solid #fff;
-        color: #fff;
+}
+
+@media only screen and (max-width: 24.5rem) {
+    #pc {
+        display: none;
+    }
+    #cell{
+        display: block;
     }
 }
 
