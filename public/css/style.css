@@ -67,3 +67,32 @@
     cursor: pointer;
     border-color: #fff;
 }
+/*
+*-------------------------------------------------------------------------
+* Session Contato
+*-------------------------------------------------------------------------
+*/
+#contato-list {
+    color: blue;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+@media (min-width: 62rem) {
+    #div-contatos {
+        float: left;
+        width: 40%;
+    }
+    #div-form {
+        float: right;
+        width: 50%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 62rem) {
+    #div-form {
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+}
