@@ -72,10 +72,19 @@
 * Session Contato
 *-------------------------------------------------------------------------
 */
+#contato {
+    background-color: #f8f9fa;
+}
 #contato-list {
-    color: blue;
     cursor: pointer;
     font-size: 17px;
+}
+
+#div-form .card {
+    border-radius: 0;
+    -webkit-box-shadow: 0 2px 3px rgba(0,0,0,.55);
+    -moz-box-shadow: 0 2px 3px rgba(0,0,0,.55);
+    box-shadow: 0 2px 3px rgba(0,0,0,.55);
 }
 
 @media (min-width: 62rem) {
@@ -93,6 +102,5 @@
 @media (max-width: 62rem) {
     #div-form {
         margin-top: 50px;
-        margin-bottom: 20px;
     }
 }
