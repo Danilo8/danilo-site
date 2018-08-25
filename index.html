@@ -52,7 +52,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link scroll" href="#servicos">Serviços</a>
+                        <a class="nav-link scroll" href="#habilidades">Habilidades</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link scroll" href="#portfolio">Portfólio</a>
@@ -74,9 +74,9 @@
             </div>
         </div>
 
-        <!--Serviços-->
-        <div style="margin-top: 100px;" class="container-fluid p-0" id="servicos">
-            <h2 style="padding-top: 120px" class="text-center">Serviços</h2>
+        <!--Habilidades-->
+        <div style="margin-top: 100px;" class="container-fluid p-0" id="habilidades">
+            <h2 style="padding-top: 120px" class="text-center">Habilidades</h2>
         </div>
         
         <!--Portfólio-->
@@ -126,7 +126,7 @@
         </div>
 
         <!--Contato-->
-        <div style="margin-top: 100px;" id="contato" class="container-fluid p-0 bg-primary">
+        <div style="margin-top: 100px;" id="contato" class="container-fluid p-0">
             <h2 style="padding-top: 120px" class="text-center">Entrar em Contato</h2>
             <div class="text-center pt-4">
                 <span>
@@ -177,7 +177,7 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4118.701890796964!2d-46.76850665189602!3d-13.043361404127088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93491f1634f231cf%3A0x62c0e7ac5d044dac!2sR.+do+Sesquicenten%C3%A1rio%2C+490-584%2C+Campos+Belos+-+GO%2C+73840-000!5e0!3m2!1spt-BR!2sbr!4v1535119262021" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
 
-        <span title="Ir para o Topo" class="btn btn-danger toTop" style="bottom: 10px;right: 20px;position: fixed;cursor: pointer;display: block;background-color: #d20911;border-radius: 30%">
+        <span title="Ir para o Topo" class="btn btn-dark toTop">
             <i style="font-size: 30px" class="fa fa-angle-double-up"></i>
         </span>
 
@@ -193,7 +193,7 @@
                         <h5 class="mb-1">Precisa de um Orçamento?</h5>
                     </li>
                     <li class="list-inline-item">
-                        <button style="border-radius: 48%" class="btn btn-success btn-lg hvr-wobble">
+                        <button id="button" class="btn btn-success" data-toggle="modal" data-target="#orcamento">
                             Clique Aqui!
                         </button>
                     </li>
@@ -205,12 +205,66 @@
         
             <!-- Copyright -->
             <div style="background-color: #242a35;color: #fff" class="footer-copyright text-center py-3">© 2018 Copyright:
-                <a href="#"> Danilo Gonçalves</a>
+                <a href="http://localhost/Portfolio"> Danilo Gonçalves</a>
             </div>
             <!-- Copyright -->
         
         </footer>
         <!-- Footer -->
+        
+        <!-- Modal de Orçamento-->
+        <div class="modal fade" id="orcamento" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title font-weight-bold" id="exampleModalLabel">Solicite seu Orçamento aqui</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form action="app/Http/Controllers/OrcamentoController" method="post" class="pt-2"></form>
+                        <div class="modal-body">
+                            <h5 class="text-center pb-3">O orçamento será enviado para o seu Email</h5>
+                            <div id="form-orcamento">
+                                <div class="form-group">
+                                    <label for="name">Nome:</label>
+                                    <input type="text" name="name" id="name" class="form-control" placeholder="Seu Nome">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" name="email" id="email" class="form-control" placeholder="Seu Email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="type">Tipo de Projeto:</label>
+                                    <select id="type" name="type" class="form-control">
+                                        <option>Escolha o Tipo do Projeto</option>
+                                        <option>Site</option>
+                                        <option>Sistema</option>
+                                        <option>Outro</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="description">Descrição do Projeto:</label>
+                                    <textarea name="description" id="description" rows="8" class="form-control"></textarea>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="company" name="client-type" class="custom-control-input">
+                                    <label class="custom-control-label" for="company">Sou uma Empresa</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="person" name="client-type" class="custom-control-input">
+                                    <label class="custom-control-label" for="person">Sou uma pessoa Física</label>
+                                </div>
+                            </div>                           
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
 
         <!--JS files-->
         <script src="public/js/popper.js"></script>

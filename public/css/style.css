@@ -31,7 +31,7 @@
 	animation: bounce 0.8s;
 }
 
-@media (min-width: 62rem) {
+@media only screen and (min-width: 62rem) {
     .navbar-brand {
         margin-left: 8%;
     }
@@ -73,7 +73,7 @@
 *-------------------------------------------------------------------------
 */
 #contato {
-    background-color: #f8f9fa;
+    background-color: #f1f2f7;
 }
 #contato-list {
     cursor: pointer;
@@ -87,7 +87,7 @@
     box-shadow: 0 2px 3px rgba(0,0,0,.55);
 }
 
-@media (min-width: 62rem) {
+@media only screen and (min-width: 62rem) {
     #div-contatos {
         float: left;
         width: 40%;
@@ -99,8 +99,69 @@
     }
 }
 
-@media (max-width: 62rem) {
+@media only screen and (max-width: 62rem) {
     #div-form {
         margin-top: 50px;
+    }
+}
+/*
+*-------------------------------------------------------------------------
+* To top
+*-------------------------------------------------------------------------
+*/
+.toTop {
+    bottom: 10px;
+    right: 20px;
+    position: fixed;
+    cursor: pointer;
+    display: block;
+    background-color: #0d3e99;
+    border-radius: 30%;
+    border-color: #fff;
+}
+/*
+*-------------------------------------------------------------------------
+* Button Orçamento
+*-------------------------------------------------------------------------
+*/
+#button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+#button:hover {background-color: #3e8e41}
+
+#button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+/*
+*----------------------------------------------------------
+* .fa
+*----------------------------------------------------------
+*/
+.fa {
+    padding-left: 8%;
+}
+/*
+*----------------------------------------------------------
+* Form Orçamento
+*----------------------------------------------------------
+*/
+@media only screen and (min-width: 62rem) {
+    #form-orcamento {
+        padding-left: 10%;
+        padding-right: 10%;
     }
 }
