@@ -31,9 +31,10 @@
 	animation: bounce 0.8s;
 }
 
+
 @media only screen and (min-width: 62rem) {
     .navbar-brand {
-        margin-left: 8%;
+        margin-left: 4%;
     }
     .navbar-nav {
         margin-left: 35%;
@@ -66,6 +67,70 @@
 .navbar-toggler:not(:disabled):not(.disabled) {
     cursor: pointer;
     border-color: #fff;
+}
+/*
+*-------------------------------------------------------------------------
+* Session Home
+*-------------------------------------------------------------------------
+*/
+#i {
+    border: 1px solid #fff;
+    margin-top: 15vh;
+    font-size: 50px;
+    padding: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: #fff;
+    border-radius: 20%;
+    background-color: rgba(0,0,0,0.8);
+}
+#i {
+    animation: bounce 2.5s 1.5s infinite;
+}
+
+#cover-container {
+    padding-bottom: 20vh;
+    padding-top: 20vh;
+}
+#frase {
+    display: block;
+}
+#whiter {
+    display: none;
+}
+@media only screen and (min-width: 62rem) {
+    #danilo {
+        font-size: 80px;
+    }
+    #cover-container {
+        padding-bottom: 11vh;
+        padding-top: 120px;
+    }
+    #sub {
+        font-size: 25px;
+    }
+    #frase {
+        display: inline;
+    }
+    #whiter {
+        display: block;
+    }
+}
+#frase::after {
+  content: '|';
+  opacity: 1;
+  margin-left: 5px;
+  display: inline-block;
+  animation: blink .7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 /*
 *-------------------------------------------------------------------------
@@ -115,9 +180,7 @@
     position: fixed;
     cursor: pointer;
     display: block;
-    background-color: #0d3e99;
     border-radius: 30%;
-    border-color: #fff;
 }
 /*
 *-------------------------------------------------------------------------
@@ -148,10 +211,10 @@
 }
 /*
 *----------------------------------------------------------
-* .fa
+* #fa
 *----------------------------------------------------------
 */
-.fa {
+#fa {
     padding-left: 8%;
 }
 /*

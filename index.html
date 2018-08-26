@@ -32,14 +32,29 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     </head>
+    <style>
+        #cover{
+            background: url('public/img/bg/bg-home-1e.png') no-repeat; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            color: #fff;   
+        }
+    </style>
     <body id="home" style="font-family: 'Open Sans', sans-serif;" data-spy="scroll" data-target="#menu">
         <!--Navbar-->
         <nav id="menu" class="navbar navbar-expand-lg navbar-dark fixed-top">
             <a id="pc" class="navbar-brand scroll hvr-wobble img-fluid" href="#home">
-                <img src="public/img/logo/logo.png" alt="Danilo Gonçalves">
+                <!--<img src="public/img/logo/logo.png" alt="Danilo Gonçalves">-->
+                <h1 style="font-family: 'Russo One', sans-serif;" class="pt-2 h2">
+                    Danilo Gonçalves
+                </h1>
             </a>
             <span id="cell" class="navbar-brand">
-                <img width="200" src="public/img/logo/logo-cell.png" alt="Danilo Gonçalves">
+                <h4 style="font-family: 'Russo One', sans-serif;" class="pt-2">
+                    Danilo Gonçalves
+                </h4>
             </span>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -68,9 +83,21 @@
         </nav>
 
         <!--Home-->
-        <div class="container-fluid">
-            <div>
-                <h2 style="padding-top: 120px">Home</h2>
+        <div style="padding-top: 100px;" id="cover" class="container-fluid">
+            <div id="cover-container"  class="container text-center">
+                <div style="border: 1px solid #fff;background-color: rgba(0, 0, 0, 0.8);border-radius: 0;" class="card card-body">
+                    <h3 id="danilo" style="font-family: 'Russo One', sans-serif;">
+                        Danilo Gonçalves
+                    </h3>
+                    <span id="sub" style="font-family: 'Russo One', sans-serif;">
+                        Desenvolvedor Web | Programador PHP
+                    </span>
+                    <p></p>
+                    <p style="font-size: 22px" id="whiter">A melho solução em <span id="frase"></span></p>
+                </div>
+                <a class="scroll" href="#habilidades">
+                    <i id="i" class="fa fa-angle-down"></i>
+                </a>
             </div>
         </div>
 
@@ -135,16 +162,16 @@
             </div>
             <div class="container p-0 pt-5">
                 <div id="div-contatos">
-                    <i style="font-size: 20px" class="fa fa-envelope-o"></i> :
+                    <i id="fa" style="font-size: 20px" class="fa fa-envelope-o"></i> :
                     <span id="contato-list">contato@email.com</span>
                     <p></p>
-                    <i style="font-size: 20px" class="fa fa-phone"></i> :
+                    <i id="fa" style="font-size: 20px" class="fa fa-phone"></i> :
                     <span id="contato-list">(62) 9 9940-9206</span>
                     <p></p>
-                    <i style="font-size: 20px" class="fa fa-whatsapp"></i> :
+                    <i id="fa" style="font-size: 20px" class="fa fa-whatsapp"></i> :
                     <span id="contato-list">(62) 9 9940-9206</span>
                     <p></p>
-                    <i style="font-size: 20px" class="fa fa-map-marker"></i> :
+                    <i id="fa" style="font-size: 20px" class="fa fa-map-marker"></i> :
                     <span id="contato-list">Campos Belos &boxh; GO, 73840-000</span>
                 </div>
                 <div id="div-form">
@@ -166,6 +193,7 @@
                                 <label for="message">Mensagem:</label>
                                 <textarea name="message" id="message" class="form-control" rows="5"></textarea>
                             </div>
+                            <input type="hidden" name="ContatoController" value="submit">
                             <div class="form-gruop text-right">
                                 <button type="submit" class="btn btn-primary btn-lg">Enviar Mensagem</button>
                             </div>
@@ -177,7 +205,7 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4118.701890796964!2d-46.76850665189602!3d-13.043361404127088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93491f1634f231cf%3A0x62c0e7ac5d044dac!2sR.+do+Sesquicenten%C3%A1rio%2C+490-584%2C+Campos+Belos+-+GO%2C+73840-000!5e0!3m2!1spt-BR!2sbr!4v1535119262021" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
 
-        <span title="Ir para o Topo" class="btn btn-dark toTop">
+        <span title="Ir para o Topo" data-toggle="tooltip" data-placement="top" class="btn btn-primary toTop">
             <i style="font-size: 30px" class="fa fa-angle-double-up"></i>
         </span>
 
@@ -222,7 +250,7 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <form action="app/Http/Controllers/OrcamentoController" method="post" class="pt-2"></form>
+                    <form action="app/Http/Controllers/OrcamentoController.php" method="post" class="pt-2">
                         <div class="modal-body">
                             <h5 class="text-center pb-3">O orçamento será enviado para o seu Email</h5>
                             <div id="form-orcamento">
@@ -255,11 +283,12 @@
                                     <input type="radio" id="person" name="client-type" class="custom-control-input">
                                     <label class="custom-control-label" for="person">Sou uma pessoa Física</label>
                                 </div>
-                            </div>                           
+                            </div> 
+                            <input type="hidden" name="OrcamentoController" value="submit">                          
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-primary">Enviar</button>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
                         </div>
                     </form>
                 </div>
@@ -271,5 +300,6 @@
         <script src="public/js/bootstrap.js"></script>
         <script src="public/js/scroll.js"></script>
         <script src="public/js/to-top.js"></script>
+        <script src="public/js/whiter.js"></script>
     </body>
 </html>
