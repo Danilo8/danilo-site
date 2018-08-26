@@ -137,9 +137,6 @@
 * Session Contato
 *-------------------------------------------------------------------------
 */
-#contato {
-    background-color: #f1f2f7;
-}
 #contato-list {
     cursor: pointer;
     font-size: 17px;
@@ -189,8 +186,8 @@
 */
 #button {
   display: inline-block;
-  padding: 15px 25px;
-  font-size: 24px;
+  padding: 10px 20px;
+  font-size: 22px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -227,4 +224,28 @@
         padding-left: 10%;
         padding-right: 10%;
     }
+}
+/*
+*----------------------------------------------------------
+* Imagem
+*----------------------------------------------------------
+*/
+
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+#ft:hover .overlay {
+  opacity: 1;
 }
