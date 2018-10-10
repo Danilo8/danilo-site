@@ -23,7 +23,7 @@ function startSlideShow() {
         if (currentImage > (imageCount - 1)) {
             currentImage = 0;
         }
-        setTimeout('startSlideShow()', 10000);
+        setTimeout('startSlideShow()', 35000);
     }
 }
 startSlideShow();
