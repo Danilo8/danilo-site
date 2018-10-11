@@ -1,7 +1,8 @@
 var div = document.getElementById('frase');
-var textos = [  'criação de sites responsivos',
-                'criação de sistemas web completos',
-                'manutenção de sistes'];
+var textos = [  'criação de Web Sites',
+                'manutenção de Sites',
+                'criação de Sistemas Completos',
+                'otimização de SEO'];
 
 function escrever(str, done) {
     var char = str.split('').reverse();
