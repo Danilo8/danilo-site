@@ -22,7 +22,7 @@
 
         <!--cdn Bootstrap CSS file-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <link rel="stylesheet" href="public/css/bootstrap.css">
+        <!-- <link rel="stylesheet" href="public/css/bootstrap.css"> -->
 
         <!--CSS files-->
         <link rel="stylesheet" href="public/css/style.css">
@@ -44,8 +44,7 @@
     <body id="home" style="font-family: 'Open Sans', sans-serif;" data-spy="scroll" data-target="#menu">
         <!--Navbar-->
         <nav id="menu" class="navbar navbar-expand-lg navbar-dark fixed-top">
-            <a id="pc" class="navbar-brand scroll img-fluid" href="#home">
-                <!--<img src="public/img/logo/logo.png" alt="Danilo Gonçalves">-->
+            <a id="pc" class="navbar-brand scroll img-fluid" href="#home">                
                 <h1 style="font-family: 'Russo One', sans-serif;" class="pt-2 h2">
                     Danilo Gonçalves
                 </h1>
@@ -120,23 +119,23 @@
 
         <!--Sobre-->
         <div class="container-fluid p-0" id="sobre">
-            <h2 style="padding-top: 120px" class="text-center">Sobre Mim</h2>
+            <h2 style="padding-top: 120px" class="text-center h2">Sobre Mim</h2>
             <div class="container mt-5 pt-5 mb-5">
                 <div class="row featurette">
                     <div class="col-md-8 order-md-2">
                         <h2 class="featurette-heading">
-                            Olá amigo(a), tudo bem?
+                            Olá amigo(a)!
                         </h2>
                         <p class="lead">
                             Me chamo <a href="http://localhost/danilo/">Danilo Gonçalves</a>,
                             sou Desenvolvedor Web e Programador PHP.
                             Tenho 17 anos e sou formado em Informática para Internet.
-                            Gosto muito de programação
+                            Sou apaixonado pelo que faço, 
                         </p>
                     </div>
                     <div id="ft" class="col-md-4 order-md-1 text-center">
                         <img class="featurette-image img-fluid" src="public/img/danilo/danilo.jpg" alt="Danilo Gonçalves">
-                        <div class="overlay">DANILO <i class="fa fa-thumbs-o-up"></i></div>
+                        <div class="overlay">Desenvolvedor Web & Programador PHP</div>
                     </div>
                 </div>
             </div>
@@ -146,7 +145,7 @@
         
         <!--Serviços-->
         <div class="container-fluid p-0" id="servicos">
-            <h2 style="padding-top: 120px" class="text-center">Serviços</h2>
+            <h2 style="padding-top: 120px" class="text-center h2">Serviços</h2>
             <div class="container pt-5 mb-5">
                 <div class="card-deck">
                     <div class="card mt-4 card-sr">                                                
@@ -164,7 +163,8 @@
                             <i style="font-size: 80px" class="fa fa-wrench mb-3 text-primary hvr-wobble"></i>
                             <h5 class="card-title font-weight-bold">Manutenção de Sites</h5>
                             <p class="card-text">
-                                
+                                Manutenção e atualização de sites, corrrigindo erros ou adicionando
+                                novas funcionalidades.
                             </p>
                         </div>
                     </div>
@@ -173,7 +173,8 @@
                             <i style="font-size: 80px" class="fa fa-code mb-3 text-primary hvr-wobble"></i>
                             <h5 class="card-title font-weight-bold">Sistemas Completos</h5>
                             <p class="card-text">
-                                
+                                Criação de Sistemas Web completos, com autenticação de usuarios,
+                                integração com Banco de Dados e painel de administração.
                             </p>
                         </div>
                     </div>
@@ -195,7 +196,7 @@
 
         <!--Habilidades-->
         <div class="container-fluid p-0" id="habilidades">
-            <h2 style="padding-top: 120px" class="text-center">Minhas Habilidades</h2>
+            <h2 style="padding-top: 120px" class="text-center h2">Minhas Habilidades</h2>
             <div class="container marketing text-center mt-5 pt-5">
                 
                 <div class="row">
@@ -252,7 +253,7 @@
         
         <!--Portfólio-->
         <div class="container-fluid p-0" id="portfolio">
-            <h2 style="padding-top: 120px" class="text-center">Meus Trabalhos</h2>
+            <h2 style="padding-top: 120px" class="text-center h2">Meus Trabalhos</h2>
             <div class="container pt-5 mb-5">
                 <div class="card-deck">
                     <div style="cursor: pointer;" class="card mt-4 card-pf" data-toggle="modal" data-target="#portfolio-modal" data-img-1="public/img/portfolio/pc-cell-TP-1.jpg" data-img-2="public/img/portfolio/pc-TP-1.jpg" data-img-3="public/img/portfolio/pc-TP-2.jpg" data-img-4="public/img/portfolio/cell-TP-1.jpg" data-title="Táxi Please">
@@ -354,7 +355,7 @@
 
         <!--Contato-->
         <div id="contato" class="container-fluid p-0">
-            <h2 style="padding-top: 120px" class="text-center">Entrar em Contato</h2>
+            <h2 style="padding-top: 120px" class="text-center h2">Entrar em Contato</h2>
             <div class="text-center pt-4">
                 <span>
                     Use o formulário abaixo para entrar em contato, que retornarei o mais breve possível.
@@ -395,24 +396,28 @@
                     <div class="card bg-dark card-body text-white">
                         <form action="app/Controllers/ContatoController.php" method="post">
                             <div class="form-group">
-                                <label for="name">Nome:</label>
-                                <input type="text" name="name" id="name" class="form-control" placeholder="Seu Nome">
+                                <label for="name_contact">Nome:</label>
+                                <input type="text" name="name_contact" id="name_contact" class="form-control" placeholder="Seu Nome">
+                                <small style="float: right;color: #b96071" id="error_name_contact"></small>
                             </div>
                             <div class="form-group">
-                                <label for="email">Email:</label>
-                                <input type="email" name="email" id="email" class="form-control" placeholder="Seu Email">
+                                <label for="email_contact">Email:</label>
+                                <input type="email" name="email_contact" id="email_contact" class="form-control" placeholder="Seu Email">
+                                <small style="float: right;color: #b96071" id="error_email_contact"></small>
                             </div>
                             <div class="form-group">
-                                <label for="subject">Assunto:</label>
-                                <input type="text" name="subject" id="subject" class="form-control" placeholder="Assunto da Mensagem">
+                                <label for="subject_contact">Assunto:</label>
+                                <input type="text" name="subject_contact" id="subject_contact" class="form-control" placeholder="Assunto da Mensagem">
+                                <small style="float: right;color: #b96071" id="error_subject_contact"></small>
                             </div>
-                            <div class="form-group">
-                                <label for="message">Mensagem:</label>
-                                <textarea name="message" id="message" class="form-control" rows="5"></textarea>
+                            <div class="form-group mb-5">
+                                <label for="message_contact">Mensagem:</label>
+                                <textarea name="message_contact" id="message_contact" class="form-control" rows="5"></textarea>
+                                <small style="float: right;color: #b96071" id="error_message_contact"></small>
                             </div>
                             <input type="hidden" name="ContatoController" value="submit">
                             <div class="form-gruop text-right">
-                                <button type="submit" class="btn btn-primary btn-lg">Enviar Mensagem</button>
+                                <button type="button" class="btn btn-primary btn-lg">Enviar Mensagem</button>
                             </div>
                         </form>
                     </div> 
@@ -467,9 +472,8 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <form action="app/Http/Controllers/OrcamentoController.php" method="post" class="pt-2">
-                        <div class="modal-body">
-                            <h5 class="text-center pb-3">O orçamento será enviado para o seu Email</h5>
+                    <form action="app/Controllers/OrcamentoController.php" method="post" class="pt-2">
+                        <div class="modal-body">                            
                             <div id="form-orcamento">
                                 <div class="form-group">
                                     <label for="name">Nome:</label>
@@ -482,24 +486,17 @@
                                 <div class="form-group">
                                     <label for="type">Tipo de Projeto:</label>
                                     <select id="type" name="type" class="form-control">
-                                        <option>Escolha o Tipo do Projeto</option>
-                                        <option>Site</option>
-                                        <option>Sistema</option>
-                                        <option>Outro</option>
+                                        <option value="">Escolha o Tipo do Projeto</option>
+                                        <option value="1">Criação de um Site</option>
+                                        <option value="2">Manutenção em um Site</option>
+                                        <option value="3">Desenvolvimento de um Sitema Web</option>
+                                        <option value="4">Outro</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="description">Descrição do Projeto:</label>
-                                    <textarea name="description" id="description" rows="8" class="form-control"></textarea>
-                                </div>
-                                <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="company" name="client-type" class="custom-control-input">
-                                    <label class="custom-control-label" for="company">Sou uma Empresa</label>
-                                </div>
-                                <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="person" name="client-type" class="custom-control-input">
-                                    <label class="custom-control-label" for="person">Sou uma pessoa Física</label>
-                                </div>
+                                    <label for="description">Descrição do Projeto: <span class="text-muted">(Diga-me sobre o projeto)</span></label>
+                                    <textarea name="description" id="description" rows="5" class="form-control"></textarea>
+                                </div>                                
                             </div> 
                             <input type="hidden" name="OrcamentoController" value="submit">                          
                         </div>
@@ -519,6 +516,7 @@
         <script src="public/js/to-top.js"></script>
         <script src="public/js/whiter.js"></script>
         <script src="public/js/slide-show.js"></script>
+        <script src="public/js/valida-form-contato.js"></script>
         <script>
             $('#portfolio-modal').on('show.bs.modal', function (event) {
                     var button = $(event.relatedTarget) 

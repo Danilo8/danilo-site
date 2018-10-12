@@ -16,16 +16,12 @@
 
         public function submit()
         {
-            if ($this->form_valido()) {
-                header("Location: ../../../");
-            } else {
-                header("Location: ../../../");
-            }  
+             
         }
 
-        public function form_valido()
+        public function redirect($to)
         {
-            
+            header('Location: ' . $to);
         }
     }
 
